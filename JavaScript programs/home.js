@@ -42,6 +42,32 @@ button.addEventListener('click',function()
 
 }); */
 
- const values=['a','b','c'];
- values.push('d');
- console.log(values);
+
+//Push method in an array
+ /*const values=['a','b','c'];
+ values.push('d'.'e');
+ console.log(values);*/
+
+
+ //Pop method in an array
+ /*const values=['a','b','c'];
+  values.pop();
+  console.log(values) */
+
+
+  //Shift in an array
+  /*const values=['a','b','c'];
+  const shiftedValue = values.shift();
+  console.log(values, + Shifted value is : + shiftedValue); */
+
+  //Unshift in an Array
+/*const values=['a','b','c'];
+ values.unshift('hey');
+ console.log(values); */
+
+ //Slice() in an array
+ 
+
+
+ //Spice() in an array
+
