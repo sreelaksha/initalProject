@@ -66,8 +66,26 @@ button.addEventListener('click',function()
  console.log(values); */
 
  //Slice() in an array
- 
+/*const values=['a' , 'b' , 'c' , 'd'];
+ const newValue = values.slice(1,3);
+ console.log(newValue); */
 
 
- //Spice() in an array
+ //Splice() in an array for deleting
+/*const values=['a' , 'b' , 'c' , 'd'];
+ const newValue = values.splice(1,3);
+ console.log(values); */
+
+
+ //Splice() in an array for inserting
+/*const values=['a' , 'b' , 'c' , 'd'];
+ const newValue = values.splice(1,1,3, 'hi');  //0 is nothing to delete ,1 is position to add,3 and hi are elements to add
+ console.log(values);  */
+
+
+
+ //
+
+
+
 
