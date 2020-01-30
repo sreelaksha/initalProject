@@ -171,10 +171,17 @@ function showDetails ()
 
 
  // 'use strict' string to say to compliler that you are in strict mode
-'use strict';
+/*'use strict';
 
  productId = 1234;
- console.log(productId);
+ console.log(productId);*/
+
+ let firstName= "Sreelaksha";
+ let lastName="Srinivas";
+ let fullName= firstName  +  lastName ;
+ console.log(fullName);
+
+
 
 
 
