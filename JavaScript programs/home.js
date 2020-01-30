@@ -127,4 +127,18 @@ values.forEach(function(arg)   {
 
 
 
+//Array in the DOM - to hide somethings in the web page using its index
+/*
+const containers = document.getElementsByClassName('container');
+containers[1].classList.add('d-none');
+console.log(containers);
+*/
+
+
+
+
+//------------------------------------------
+//Scope and Hoisting
+
+
 
