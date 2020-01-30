@@ -79,12 +79,51 @@ button.addEventListener('click',function()
 
  //Splice() in an array for inserting
 /*const values=['a' , 'b' , 'c' , 'd'];
- const newValue = values.splice(1,1,3, 'hi');  //0 is nothing to delete ,1 is position to add,3 and hi are elements to add
+ const newValue = values.splice(1,0,3, 'hi');  //0 is nothing to delete ,1 is position to add,3 and hi are elements to add
  console.log(values);  */
 
+//Array searching and looping
+ //indexOf()
+/*const values=['a' , 'b' , 'c' , 'd'];
+ const newValue = values.indexOf('y'); //index of -1 is not possible so it means its not found
+ console.log(newValue)*/;
+ //or console.log(values.indexOf('d'));
 
 
- //
+
+ //find()
+/*const values=['a' , 'bbbb' , 'cccc' , 'dddd'];
+ const result = values.find(function(arg) {
+        console.log('Item is :' ,arg);
+        return arg.length >3;
+ }
+ );
+ console.log(result);*/
+
+
+
+
+ //filter()
+/*const values=['a' , 'b' , 'c' , 'd'];
+ const result = values.filter(function(arg) {
+        console.log('Item is :' ,arg);
+        return arg >'b';
+ }
+ );
+ console.log(result);*/
+
+
+
+
+ //forEach()
+/*const values=['a','b','c','d']
+values.forEach(function(arg)   {
+
+    console.log(arg);
+});*/
+
+
+
 
 
 
