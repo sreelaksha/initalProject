@@ -139,6 +139,42 @@ console.log(containers);
 
 //------------------------------------------
 //Scope and Hoisting
+// ******* Global scope  *******
+//Always good to declare an object and then add all data in it than add individual data with global scope
+  /*const details={
+    ProductId: 12,
+    ProductName: 'Handbag',
+    Username :'Laksha'
+  };
+
+  function showDetails ()
+  {
+    console.log('PId is :', details.ProductId);
+  }
+  showDetails();*/
+
+
+
+
+
+//Function Scope
+
+//Hoisting is possible for Functions (see ex) but for variable and  use let and const and avoid var
+
+/*showDetails();  //hoisting
+function showDetails ()
+  {
+    console.log(123);
+  }
+  */
+
+
+
+ // 'use strict' string to say to compliler that you are in strict mode
+'use strict';
+
+ productId = 1234;
+ console.log(productId);
 
 
 
