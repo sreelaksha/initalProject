@@ -147,7 +147,7 @@ console.log(message);
 //IIFE - immediately invoked function expression
 /*
 let app = (function(){
-    let carid= 23;
+    let carId= 23;
     console.log('hi');
     return {}; // an empty object
 })
@@ -157,6 +157,23 @@ console.log(app);
 
 
 //Closure
+/*let app = (function(){
+    let carId= 123;
+    let getId=function(){
+        return carId;
+    };
+    return{  //closure return reference to the function
+        getId:getId
+    };
+})
+();
+console.log(app.getId());*/
+
+
+// The this keyword
+
+
+
 
 
 
