@@ -171,7 +171,14 @@ console.log(app.getId());*/
 
 
 // The this keyword
-
+/*let obj={
+    carId: 123,
+    getId: function(){
+        console.log(this);
+        return this.carId;
+    }
+};
+console.log(obj.getId());*/
 
 
 
