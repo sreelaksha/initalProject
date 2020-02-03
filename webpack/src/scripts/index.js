@@ -131,9 +131,32 @@ console.log(userSettings || defaultSettings);
 startCar(123);*/
 
 
+/* // block scope
+var message = "outside";
+if('a'=='a')
+{
+    var message = "inside equal"; //block scope
+    //does not apply for var and applies only for let
+    //so use let keyword
+    console.log(message);
+}
+console.log(message);
+*/
 
 
+//IIFE - immediately invoked function expression
+/*
+let app = (function(){
+    let carid= 23;
+    console.log('hi');
+    return {}; // an empty object
+})
+(); //calling the above function it has no arg so
+console.log(app);
+*/
 
+
+//Closure
 
 
 
