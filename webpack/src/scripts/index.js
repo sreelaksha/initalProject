@@ -225,10 +225,29 @@ let o2= { carId: 456 };
     console.log(function2());
 */
 
+//Arrow functions
 
+//1
+/*
+//function    parameter  parameter+ return value
+let getId = prefix => prefix + 123;
+            //or if no parameter
+            //let getId = () => 123; or let getId = _ => 123;
+            // _ signifies a variable
+console.log(getId("Id:"));
+*/
 
+//2
+/*let getId = (prefix,suffix) => prefix + 123 + suffix;
+console.log(getId("Id:" , '!'));*/
 
-
+//3 if {} is used then return keyword should be mentioned
+/*
+let getId = (prefix,suffix) => {
+    return prefix + 123 + suffix;
+};
+console.log(getId( "Id:" , '!' ));
+*/
 
 
 
