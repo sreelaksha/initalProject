@@ -181,6 +181,39 @@ console.log(app.getId());*/
 console.log(obj.getId());*/
 
 
+// call and apply function-used to change value of this
+/*
+let o1={
+    carId: 123,
+    getId: function(){
+        console.log(this);
+        return this.carId;
+    }
+};
+let o2newCar= {
+    carId: 456
+    };
+console.log(o1.getId.call(o2newCar));
+*/
+
+//apply- to pass argument
+/*
+let o1={
+    carId: 123,
+    getId: function(arg){  //arg in function
+        console.log(this);
+        return arg+this.carId;
+    }
+};
+let o2newCar= {
+    carId: 456
+    };
+console.log(o1.getId.apply(o2newCar,['Id:'])); // here passing arg id
+/*
+
+
+
+
 
 
 
