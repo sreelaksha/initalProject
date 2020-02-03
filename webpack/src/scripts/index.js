@@ -209,7 +209,23 @@ let o2newCar= {
     carId: 456
     };
 console.log(o1.getId.apply(o2newCar,['Id:'])); // here passing arg id
-/*
+*/
+
+
+
+//bind  - copy a functions and assign to new context or change he this value
+/*let o1={
+    carId: 123,
+    getId: function(){
+        return this.carId;
+    }
+};
+let o2= { carId: 456 };
+    let function2 = o1.getId.bind(o2);
+    console.log(function2());
+*/
+
+
 
 
 
