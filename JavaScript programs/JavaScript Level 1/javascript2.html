@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript with a script function</title>
+    <script>
+        function ShowDate()
+        {
+            document.getElementById('demo').innerHtml=Date();
+        }
+
+    </script>
+    <script>
+        function promptUser()
+        {
+            var name= window.prompt("Enter your name");
+            if( name!= null || name=="")
+            {
+                var text= "Hello" +name;
+            }
+            document.getElementById("name").innerHTML=name;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="ShowDate();">
+        See the date here
+    </button>
+    <p id="demo"></p>
+
+
+</body>
+</html>

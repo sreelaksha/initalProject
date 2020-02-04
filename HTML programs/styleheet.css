@@ -1,0 +1,20 @@
+.specific
+{
+    color:lightgreen;
+    background-color:red;
+    border: 5px solid black;
+
+}
+
+p{
+    background-color:gray;
+    font-style:italic;
+    padding:5px;
+}
+#otherspecific
+{
+    color:blue;
+    background-color:gray;
+    border: 5px solid black;
+
+}
