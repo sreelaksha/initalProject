@@ -408,6 +408,40 @@ console.log(s1.identify('!!!'));
 
 
 //Inheritance
+/*
+class Fruit
+{
+    constructor()
+    {
+        this.name= 'apple';
+    }
+    start()
+    {
+        return `Fruit name: ${this.name}`;
+    }
+}
+class Orange extends Fruit // inheriting from base class
+{
+    constructor(){
+    super();   //to call base constructor
+    }
+    start()
+    {
+        return 'This is start in orange. ' + super.start();
+    }
+}
+let fruit1= new Orange();
+console.log(fruit1.start());
+*/
+
+
+//Creating a Module
+
+
+
+
+
+
 
 
 
