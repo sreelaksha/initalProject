@@ -374,4 +374,42 @@ console.log(funcFind);
 */
 
 
+//Classes and Methods
+/*
+class Student
+{
+  constructor(id)
+  {
+    this.id= id;
+  }
+
+}
+let student = new Student(999);
+console.log(student.id);
+*/
+
+//Methods
+/*
+class Student
+{
+    constructor (id)
+    {
+        this.id=id;
+    }
+    identify(suffix)  //this is method no need of function keyword
+    {
+        return `StudentId: ${this.id} ${suffix}` ;
+    }
+}
+let s1= new Student(989);
+console.log(s1.identify('!!!'));
+*/
+
+
+
+//Inheritance
+
+
+
+
 
