@@ -225,7 +225,7 @@ let o2= { carId: 456 };
     console.log(function2());
 */
 
-//Arrow functions
+//Arrow functions - has no this value of its own
 
 //1
 /*
@@ -248,6 +248,41 @@ let getId = (prefix,suffix) => {
 };
 console.log(getId( "Id:" , '!' ));
 */
+
+
+//Default parameter
+/*
+let trackCar= function(carId, city = 'IN'){
+    console.log(`Tracking ${carId} in ${city}`);
+};
+console.log(trackCar(909));
+console.log(trackCar(100,'DE'));
+*/
+
+
+//Objects and Array
+
+//Constructor with parameter
+/*
+function Car(id)
+{
+this.carId=id;
+}
+let vehicle=new Car(9999);
+console.log(vehicle.carId);
+*/
+
+
+//Constructor Functions with parameters and methods
+/*function Car(id)
+{
+    this.carId=id; //parameter
+    this.start= function(){  //method used on obj in constructor
+        console.log('Start: ' +this.carId);
+    };
+}
+let vehicle= new Car(1234); //constructor
+vehicle.start();*/
 
 
 
