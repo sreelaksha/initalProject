@@ -306,7 +306,7 @@ console.log('Hash'. greeting());*/
 
 //JSON- JavaScript Object Notation come from WebServer or some http call
 //to send to API - //must be enclosed in `` for parsing
-let array=
+/*let array=
 `[
     {"carId":1},
     {"carId":2},
@@ -315,4 +315,63 @@ let array=
 ]`;
 let carId=(JSON.parse(array)); //parsing Json
 console.log(carId);
-console.log(JSON.stringify(array));   //convert array to JSON
+console.log(JSON.stringify(array));*/   //convert array to JSON
+
+
+//              ******** Array iteration *******
+//Using forEach
+/*
+let array=[
+    {carId:1 , style: "sedan"},
+    {carId:2 , style: "convertible"},
+    {carId:3 , style: "hatchback"},
+];
+array.forEach((car)=> console.log(car)); //car is the parameter
+array.forEach((car,index)=> console.log(car,index)); //car,index is the parameter
+*/
+
+
+//Using Filter
+/*
+let array=[
+    {carId:1 , style: "sedan"},
+    {carId:2 , style: "convertible"},
+    {carId:3 , style: "sedan"},
+];
+
+let funcFilter = array.filter(
+    car => car.style === "sedan"
+);
+console.log(funcFilter);
+*/
+
+//using every - tests every element in an array and gives true or false
+/*let array=[
+    {carId:1 , style: "sedan"},
+    {carId:2 , style: "convertible"},
+    {carId:3 , style: "sedan"},
+];
+
+let funcTesting = array .every(
+    car => car.carId < 4
+);
+console.log(funcTesting);
+*/
+
+
+//Using find - to locate the first match
+/*
+let array=[
+    {carId:100 , style: "sedan"},
+    {carId:200 , style: "convertible"},
+    {carId:300 , style: "sedan"},
+];
+
+let funcFind = array.find(
+    car => car.carId>150
+);
+console.log(funcFind);
+*/
+
+
+
