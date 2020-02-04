@@ -436,7 +436,12 @@ console.log(fruit1.start());
 
 
 //Creating a Module
+//Also refer car.js file which is imported here
+import { Fruit } from './models/car.js';
+let f1 = new Fruit(999);
+console.log(f1.id);
 
+//
 
 
 
