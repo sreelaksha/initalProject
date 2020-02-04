@@ -284,9 +284,35 @@ console.log(vehicle.carId);
 let vehicle= new Car(1234); //constructor
 vehicle.start();*/
 
+//Prototype
+//this.start function gets replicated 100 times
+//for 100 cars so we make use of prototype to save memory
+/*function Car(id)
+{
+    this.carId=id; //parameter
+ }
+    Car.prototype.start= function(){
+        console.log('Start: ' +this.carId);
+    };
+let vehicle= new Car(1234); //constructor
+vehicle.start();*/
 
 
+//Expanding object using prototypes
+/*String.prototype.greeting=function(){
+    return this.toString() + 'Hi';
+}
+console.log('Hash'. greeting());*/
 
-
-
-
+//JSON- JavaScript Object Notation come from WebServer or some http call
+//to send to API - //must be enclosed in `` for parsing
+let array=
+`[
+    {"carId":1},
+    {"carId":2},
+    {"carId":3},
+    {"carId":4}
+]`;
+let carId=(JSON.parse(array)); //parsing Json
+console.log(carId);
+console.log(JSON.stringify(array));   //convert array to JSON
