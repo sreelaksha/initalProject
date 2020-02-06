@@ -140,12 +140,27 @@ xhttp.send();
 */
 
 
-//HTTP Request using jQuery
+//HTTP Request using jQuery - let promise=$.get(url);
+/*import $ from 'jquery';
 
+let promise = $.get("https://google.com");
+promise.then(
+    data => console.log('success:',data),
+    error => console.log('error:',error)
+);*/
 
-
-//HTTP POST using jQuery
-
+//HTTP POST using jQuery - let promise=$.post(url,data);
+/*import $ from 'jquery';
+let user={
+    name: 'Laksha',
+    avatar: 'lak.jpg'
+};
+let promise = $.post("https://google.com",user);
+//on Post we must mention the data that needs to be posted.Ex,user
+promise.then(
+    data => console.log('success:',data),
+    error => console.log('error:',error)
+);*/
 
 
 
