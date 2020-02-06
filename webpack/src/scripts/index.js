@@ -48,6 +48,129 @@ element.style.color = 'blue';*/
 
 
 
+//Promises and Error Handling
+//Error Handling using try and catch blocks
+/*try{
+    let car= newCar;
+}
+catch(error)
+{
+    console.log('ERROR!!!' , error); //error is a object
+}
+console.log('continuing.....');*/
+
+//finally
+
+/*
+try
+{
+    let car= null; //may or may not throw an error but finally always executes
+}
+catch(error)
+{
+    console.log('ERROR!!!' , error); //error is a object
+}
+finally
+{
+    console.log('the finally block always executes.....');
+}
+*/
+
+
+
+//Developer Defined Error
+//throw
+/*try
+{
+    //code here ...
+    throw new Error('my custom error'); //Error is an object
+//Error object is caught in the error parameter in the catch block
+}
+catch(error)
+{
+    console.log('ERROR!!!' , error);
+}
+finally
+{
+    console.log('the finally block always executes.....');
+}*/
+
+
+//Creating a Promise
+/*
+let promise = new Promise(
+    function(resolve,reject){
+    setTimeout(reject,100,'someValue');
+    //reject can be changed to resolve too
+    }
+);
+console.log(promise);
+*/
+
+
+//Settling a promise
+/*
+let promise = new Promise(
+    function(resolve,reject){
+    setTimeout(resolve, 100 , 'someValue');
+    }
+);
+console.log(promise);
+promise.then(  //then function with 2 arguments
+    value => console.log('Promise fulfilled' +value),
+    error =>console.log('Promise rejected' +error)
+);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
