@@ -97,6 +97,7 @@ finally
 
 
 //Creating a Promise
+//function(resolve,reject)
 /*
 let promise = new Promise(
     function(resolve,reject){
@@ -109,6 +110,7 @@ console.log(promise);
 
 
 //Settling a promise
+//then(fulfilledFn,rejectedFn)
 /*
 let promise = new Promise(
     function(resolve,reject){
@@ -121,6 +123,32 @@ promise.then(  //then function with 2 arguments
     error =>console.log('Promise rejected' +error)
 );
 */
+
+
+//10. Data Access Using HTTP
+//HTTP Request using XHR
+/*
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+if(this.readyState == 4 && this.status ==200)
+{
+    console.log(this.responseText);
+}
+};
+xhttp.open("GET", "" , true);
+xhttp.send();
+*/
+
+
+//HTTP Request using jQuery
+
+
+
+//HTTP POST using jQuery
+
+
+
+
 
 
 
