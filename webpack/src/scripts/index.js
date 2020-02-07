@@ -162,6 +162,78 @@ promise.then(
     error => console.log('error:',error)
 );*/
 
+//**** Forms *****
+//Preventing Form Submission
+/*
+let form= document.getElementById('user-form');
+form.addEventListener('submit',event => {
+    event.preventDefault();
+    //prevent the browser from submitting the form
+});
+*/
+
+
+//Accessing Form Fields
+//forms.elements['name'];
+/*let form= document.getElementById('user-form');
+form.addEventListener('submit',event => {
+    let user = form.elements['user'];
+    let avatarF = form.elements['avatar-file'];
+
+    console.log(user.value, avatarF.value);
+    event.preventDefault();
+});*/
+
+
+//        ****** Showing Validation Errors ********
+//element.focus();
+
+/*let form= document.getElementById('user-form');
+
+form.addEventListener('submit',event => {
+
+
+    let user = form.elements['user'];
+    let userError = document.getElementById('user-error');
+
+if(user.value.length < 4)
+{
+    userError.textContent = 'Invalid entry';
+    userError.style.color = 'red';
+    user.style.borderColor = 'red';
+    user.focus();
+
+    //console.log(user.value, avatarF.value);
+    event.preventDefault();
+}
+});*/
+
+
+//Posting From JavaScript
+/*
+import $ from 'jquery';
+let form= document.getElementById('user-form');
+form.addEventListener('submit',event => {
+    let user = form.elements['user'];
+    let avatarF = form.elements['avatar-file'];
+
+    let posting = {
+        user :  user.value,
+        avatarFile : avatarF.value
+    };
+
+    let promise = $.post("https://google.com", posting);
+
+    promise.then(
+        data => console.log('success', data),
+        error => console.log('error', error)
+    );
+
+    event.preventDefault();
+});
+*/
+
+
 
 
 
