@@ -36,3 +36,19 @@ console.log(cat);*/
 
 
 //Using Objects.create() to create JavaScript Objects
+var cat =  Object.create(Object.prototype,
+    {
+        name: {
+            value: 'Maxi',
+            enumerable: true,
+            writable: true,
+            configurable:true
+        },
+        color:{
+            value: 'White',
+            enumerable: true,
+            writable: true,
+            configurable:true
+        }
+    });
+console.log(cat);
