@@ -189,8 +189,148 @@ console.log(dog.name.last);
 
 //-------------------------------------------------
 //JavaScript Prototypes and Inheritance
+//JavaScript Prototypes
+/*
+'use strict';
+var array = ['green','white','orange'];
+//var last =  arr[arr.length-1];
+Object.defineProperty(Array.prototype,'last',
+{
+    get : function()
+    {
+        return this[this.length-1];
+    }
+});
+var last = array.last;
+console.log(last);
+var array2 = ['one','two','three'];
+var last = array2.last;
+console.log(last);
+*/
 
 
+
+//What is a Prototype?  *????1
+//Instance v/s Prototype properties  *?????2
+//Graphical Overview of Prototype
+/*
+'use strict';
+function Cat(name,color)
+{
+    this.name=name;
+    this.color=color;
+}
+Cat.prototype.age=5;
+var fluffy =  new Cat('Fluffy','White');
+var muffy =  new Cat('Muffy','Brown');
+fluffy.age=8;
+//fluffy._proto_.age =10;
+console.log(fluffy.age);
+Cat.prototype.age = 10;
+console.log(fluffy.age);
+console.log(muffy.age);
+*/
+
+
+
+//Changing a Functions Prototype
+/*'use strict';
+function Cat(name,color)
+{
+    this.name=name;
+    this.color=color;
+}
+Cat.prototype.age=5;
+var fluffy =  new Cat('Fluffy','White');
+var muffy =  new Cat('Muffy','Brown');
+Cat.prototype = {age:15};
+var sniffy = new Cat('Sniffy','Black');
+
+console.log(sniffy.age);
+console.log(fluffy.age);
+console.log(muffy.age);
+console.log(Cat.prototype.age);*/
+
+
+
+//Multiple Levels of Inheritance
+/*
+'use strict';
+function Cat(name,color)
+{
+    this.name=name;
+    this.color=color;
+}
+Cat.prototype.age = 4;
+var fluffy =  new Cat('Fluffy','White');
+console.log(fluffy.__proto__);//Cat prototype with age
+console.log(fluffy.__proto__.__proto__);//constructor object
+console.log(fluffy.__proto__.__proto__.__proto__);//null
+*/
+
+
+//Creating your own Prototypal Inheritance Chains *????3
+//use the 3 concepts in the programs to achieve this
+/*
+'use strict';
+function Animal(voice)
+{
+  this.voice=voice || 'grunt'; ////if no voice is passed defaults to grunt
+  }
+
+    Animal.prototype.speak =function()
+    {
+        console.log(this.voice);
+    };
+function Cat(name,color)
+{
+    Animal.call(this,'Meooww'); //1st concept
+    this.name=name;
+    this.color=color;
+}
+Cat.prototype = Object.create (Animal.prototype); //2nd concept
+//for constructor to be a cat
+Cat.prototype.constructor= Cat; //3rd concept
+var fluffy = new Cat('Fluffy','White');
+fluffy.speak();
+console.log(fluffy instanceof Cat);
+console.log(fluffy instanceof Animal);
+console.log(fluffy);//cat
+console.log(fluffy.__proto__); //cat
+console.log(fluffy.__proto__.__proto__);//Animal
+*/
+
+
+//Creating Prototypes with Classes
+/*
+'use strict';
+class Animal {
+    constructor(voice)
+    {
+        this.voice = voice || 'grunt';
+    }
+    speak()
+    {
+        console.log(this.voice);
+    }
+}
+class Cat extends Animal
+{
+    constructor(name,color)
+    {
+        super('Meowww');
+        this.name = name;
+        this.color =color;
+    }
+}
+var fluffy = new Cat('Fluffy','White');
+fluffy.speak();
+console.log(fluffy);
+console.log(fluffy.constructor); //constructor is a class
+console.log(Object.keys(fluffy.__proto__)); //empty array
+console.log(Object.keys(fluffy.__proto__.__proto__));
+console.log(fluffy.__proto__.__proto__.hasOwnProperty('speak'));
+*/
 
 
 
