@@ -75,6 +75,139 @@ cat.speak();
 */
 
 
+//JavaScript Objects and Prototypes
+//Using bracket Notation to access JavaScript Properties
+/*
+var dog = {
+    name: 'Duggu' ,
+    color: 'Brown' ,
+    };
+dog['Eye color'] = 'Black';
+console.log(dog['color']); // which is same as dog.color
+console.log(dog['Eye color']);
+*/
+
+
+//Using JavaScript Property Descriptors
+/*var dog =
+{
+    name: 'Duggu' ,
+    color: 'Brown' ,
+};
+console.log(Object.getOwnPropertyDescriptor(dog, 'color'));*/
+
+
+//Using Writable Attribute
+/*
+'use strict';
+var dog =
+{
+    name: {first:'Kalia', last : 'Srinivas'},
+    color: 'Brown',
+};
+Object.defineProperty(dog,'name',{writable:false});
+//Object.freeze(dog.name); //to prevent object being changed
+dog.name.first = 'Duggu'; //value of object can be changed like this
+console.log(Object.getOwnPropertyDescriptor(dog, 'name'));
+console.log(dog.name);
+*/
+
+
+
+//Using Enumerable Attribute
+/*
+'use strict';
+var dog =
+{
+    name: {first:'Duggu', last : 'Srinivas'},
+    color: 'Brown',
+};
+Object.defineProperty(dog, 'name', {enumerable : false});
+//setting enumerable to false
+//1. does not show up properties on object keys
+//2.affects JSON serialization of the object
+//console.log(Object.getOwnPropertyDescriptor(dog, 'name'));
+for(var propertyName in dog)
+{
+    console.log(propertyName + ' is:' + dog[propertyName]);
+}
+console.log(Object.keys(dog));//1
+console.log(JSON.stringify(dog));//2
+console.log(dog['name']); //when enumerable is set to false does not change bracket notation
+*/
+
+
+//Using Configurable Attribute
+/*'use strict';
+var dog =
+{
+    name: {first:'Duggu', last : 'Srinivas'},
+    color: 'Brown',
+};
+Object.defineProperty(dog,'name',{configurable:false});
+//Object.defineProperty(dog,'name',{writable:true});
+delete dog.name;
+console.log(dog.name);*/
+/*
+1. you cannot change enumerable attribute
+2. you cannot change configurable attribute
+3. you can change writable attribute
+4. you cannot delete a property
+*/
+
+
+
+//Using Getters and Setters
+/*
+'use strict';
+var dog =
+{
+    name: {first:'Duggu', last : 'Srinivas'},
+    color: 'Brown',
+};
+Object.defineProperty(dog,'fullName',
+{
+    get:function()
+    {
+        return this.name.first + ' ' + this.name.last;
+    },
+    set: function(value)
+    {
+       var setName = value.split(' ');
+       this.name.first = setName[0];
+       this.name.last = setName[1];
+    }
+});
+console.log(dog.fullName);
+dog.fullName = 'King Kalia';
+console.log(dog.fullName);
+console.log(dog.name.first);
+console.log(dog.name.last);
+*/
+
+
+
+//-------------------------------------------------
+//JavaScript Prototypes and Inheritance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
