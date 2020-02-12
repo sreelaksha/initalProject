@@ -36,6 +36,7 @@ console.log(cat);*/
 
 
 //Using Objects.create() to create JavaScript Objects
+/*
 var cat =  Object.create(Object.prototype,
     {
         name: {
@@ -51,4 +52,36 @@ var cat =  Object.create(Object.prototype,
             configurable:true
         }
     });
+console.log(cat);*/
+
+
+//Classes to create Object using ECMAScript6
+/*
+class Cat
+{
+    constructor(name,color)
+    {
+        this.name= name;
+        this.color= color;
+    }
+    speak()
+    {
+        console.log('Meoww');
+    }
+}
+var cat= new Cat('Max','Brown');
 console.log(cat);
+cat.speak();
+*/
+
+
+
+
+
+
+
+
+
+
+
+
