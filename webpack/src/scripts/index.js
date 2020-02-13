@@ -61,6 +61,52 @@ console.log(urgentTask.toString());
 
 
 //Creational Design Pattern
+//Constructor Pattern
+/*var Task = function(name){
+        this.name = name;
+        this.completed = false;
+
+    this.over = function(){
+        console.log('Completed task:' + this.name);
+        this.completed = true;
+    };
+    this.save = function(){
+        console.log('Saving task:' + this.name);
+    };
+    };
+var task1 = new Task ('Program for constructor');
+var task2 = new Task ('Program for modules');
+var task3 = new Task ('Program for singletons');
+task1.over();
+task2.save();*/
+
+
+//Prototypes
+/*var Task = function(name){
+        this.name = name;
+        this.completed = false;
+};
+Task.prototype.over = function(){
+        console.log('Completed task:' + this.name);
+        this.completed = true;
+    };
+Task.prototype.save = function(){
+        console.log('Saving task:' + this.name);
+    };
+
+var task1 = new Task ('Program for constructor');
+var task2 = new Task ('Program for modules');
+var task3 = new Task ('Program for singletons');
+task1.over();
+task2.save();*/
+
+
+//Constructor Node
+
+
+
+
+
 
 
 
