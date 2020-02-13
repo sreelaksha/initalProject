@@ -101,9 +101,30 @@ task1.over();
 task2.save();*/
 
 
-//Constructor Node
-
-
+//Demo : Class
+/*
+'use strict';
+class Task
+ {
+    constructor(name){
+        this.name = name;
+        this.completed = false;
+    }
+    over(){
+        console.log('Completed task:' + this.name);
+        this.completed = true;
+    };
+    save(){
+        console.log('Saving task:' + this.name);
+    };
+}
+var task1 = new Task ('Program for constructor');
+var task2 = new Task ('Program for modules');
+var task3 = new Task ('Program for singletons');
+task1.over();
+task2.save();
+task2.save();
+*/
 
 
 
