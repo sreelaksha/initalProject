@@ -68,8 +68,9 @@ print();
 
 
 //This is 'new' object
+/*
 var obj= function(){
-    var _this =this; //make a copy and use it throughout for the object 
+    var _this =this; //make a copy and use it throughout for the object
    console.log(this);
     _this.hello = 'hello';
 
@@ -85,6 +86,17 @@ var obj= function(){
 var greeter = new obj();
 //console.log(greeter);
 greeter.delayGreeting();
+*/
+
+
+//Async Pattern
+//Callbacks
+//Promises
+//ES6 and Babel
+//Async -Await
+
+//Production Code
+//NPM Settings
 
 
 
