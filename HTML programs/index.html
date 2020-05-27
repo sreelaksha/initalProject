@@ -45,21 +45,35 @@
 </head>
 
 <body>
-    <button onclick = "loopStringSample();">Loop String sample</button>
+    <button onclick = "breakSample();">Break sample</button>
     <script>
-    'use strict';
+		 'use strict';
 
-    function loopStringSample(){
-         let string = "Laksha is a FE developer"  ;
-         let letters = "";
-         console.log(letters);
+		 let products = [
+		 {
+			 "productID": 7009,
+			 "name" : 'Lipstick',
+			 "mrp": 1000,
+			 "standardCost": 400,
+		 },
+		 {
+			 "productID": 7010,
+			 "name" : 'Brush',
+			 "mrp": 1500,
+			 "standardCost": 1000,
+		 },
+		 ];
 
-        for (let value of string) {
-            letters += value;
-         }
-            console.log(letters); //Laksha is a FE developer
-    }
-    </script>
+		 function breakSample(){
+			 for (let item of products) {
+				 if(item.standardCost>500){
+				 continue;
+				 }
+				 console.log(item);
+			 }
+		 }
+		 </script>
+
 
 </body>
 </html>
