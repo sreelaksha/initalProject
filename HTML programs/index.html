@@ -45,18 +45,20 @@
 </head>
 
 <body>
-    <button onclick = "plusSignSample();">Plus Sign Sample </button>
+    <button onclick = "simpleTryCatch();">Try, Catch and Finally blocks </button>
     <script>
-		 'use strict';
-        function plusSignSample(){
-            let price = 200;
-            let string = "100";
-
-            let result = price + string;
-            console.log(result);
-
-            let result2 = price + (+string);
-            console.log(result2);
+        function simpleTryCatch(){
+            let result;
+           //let x = 2;
+            try{
+                result = 100/x;
+               // console.log("This is not an error when x is divisible");
+               }catch(error){
+                   console.log(error.message);
+               }
+               finally{
+                console.log("In the finally block");
+               }
         }
 
 		 </script>
