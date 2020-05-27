@@ -45,24 +45,30 @@
 </head>
 
 <body>
-    <button onclick = "forInSample();">for/in sample</button>
+    <button onclick = "forOfSample();">for/of sample</button>
     <script>
     'use strict';
-        function forInSample(){
-            let product = {
+
+            let products = [
+            {
                 "productID": 7009,
                 "name" : 'Lipstick',
                 "mrp": 1000,
                 "standardCost": 600,
-                calculateProfit: function (){
-                    return this.mrp - this.standardCost;
-                }
-            };
+            },
+                {
+                    "productID": 7009,
+                    "name" : 'Brush',
+                    "mrp": 1000,
+                    "standardCost": 600,
+                },
+            ];
 
-          for (let key in product) {
-            console.log("" +key+ "=" +product[key]);
+        function forOfSample(){
+          for (let value of products) {
+            console.log(JSON.stringify(value)); // bot the above objects
           }
-        }
+        } // 'of' keyword keeps track of which item in the array is currently being processed
     </script>
 
 </body>
