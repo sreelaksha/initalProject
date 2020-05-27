@@ -45,26 +45,25 @@
 </head>
 
 <body>
-    <button onclick = "throwError()">Custom Error using throw </button>
+    <button onclick = "typeofSample()">typeof Sample </button>
     <script>
-        function throwError(){
-            try{
-            validateDivision();
-            }catch(error){
-                console.log("ErrorMsg: " + error.message + " ErrorType: " + error.name);
-            }
-        }
-        function validateDivision(){
+        function typeofSample(){
+            let product = [1,2,3];
+            let date = new Date();
+            let str = new String();
+            let isActive = false;
             let result;
+            let val = null;
 
-            try{
-                result = 100/x;
-               }catch(error){
-                   throw{
-                        "message" : " In the validateDivision() this error occurred: " + error.message ,
-                        "name" : " CustomError "
-               };
-            }
+
+            console.log(typeof product);
+            console.log(typeof date);
+            console.log(typeof str);
+            console.log(typeof isActive);
+            console.log(typeof result);
+            console.log(typeof val);
+
+
         }
 		 </script>
 
