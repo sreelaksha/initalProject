@@ -45,33 +45,20 @@
 </head>
 
 <body>
-    <button onclick = "breakSample();">Break sample</button>
+    <button onclick = "plusSignSample();">Plus Sign Sample </button>
     <script>
 		 'use strict';
+        function plusSignSample(){
+            let price = 200;
+            let string = "100";
 
-		 let products = [
-		 {
-			 "productID": 7009,
-			 "name" : 'Lipstick',
-			 "mrp": 1000,
-			 "standardCost": 400,
-		 },
-		 {
-			 "productID": 7010,
-			 "name" : 'Brush',
-			 "mrp": 1500,
-			 "standardCost": 1000,
-		 },
-		 ];
+            let result = price + string;
+            console.log(result);
 
-		 function breakSample(){
-			 for (let item of products) {
-				 if(item.standardCost>500){
-				 continue;
-				 }
-				 console.log(item);
-			 }
-		 }
+            let result2 = price + (+string);
+            console.log(result2);
+        }
+
 		 </script>
 
 
