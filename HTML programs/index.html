@@ -49,15 +49,20 @@
     <script>
         function simpleSwitch(){
             let choice;
-            switch(choice= '3'){
-            case 1:
+            switch(choice= 2){
+            case 1:{
+                let message= "Hi"
                 console.log("Choice Grey");
                 break;
+                }
             case 2:
-                console.log("Choice blue");
+            {
+                let message = "Bye";
+                console.log(message);
                 break;
-            case '3':
-                console.log("Choice 3);
+                }
+            case 3:
+                console.log("Choice 3");
                 break;
             default:
                 console.log("Unknown color");
