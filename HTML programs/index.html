@@ -45,11 +45,31 @@
 </head>
 
 <body>
-    <button onclick = "simpleSwitch();">Simple Switch Sample</button>
+    <button onclick = "simpleSwitch();">Multiple switch statements</button>
     <script>
         function simpleSwitch(){
-
-
+            let choice;
+            switch(choice= 'Blue' ){
+            case 'Grey':
+            case 'Cement':
+            case 'Dark Grey':
+                console.log("Choice Grey");
+                break;
+            case 2:
+            case 'Blue':
+            case 'Dark Blue':
+                console.log("Choice blue");
+                break;
+            case 3:
+            case 'pink':
+            case 'baby pink':
+                console.log("Choice pink");
+                break;
+            default:
+                console.log("Unknown color");
+                break;
+                }
+        }
     </script>
 
 </body>
