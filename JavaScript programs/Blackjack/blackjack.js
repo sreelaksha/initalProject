@@ -1,5 +1,6 @@
 // Code goes here
 
+/*
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values=['Ace','King','Queen','Jack','Ten','Nine','Eight',
             'Seven','Six','Five','Four','Three','Two' ];
@@ -47,3 +48,4 @@ console.log("your dealts are:");
 console.log(""+ getCardString(playerCards[0]));
 console.log(""+ getCardString(playerCards[1]));
 console.log(""+ getCardString(playerCards[2]));
+*/
