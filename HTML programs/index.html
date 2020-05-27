@@ -45,29 +45,23 @@
 </head>
 
 <body>
-    <button onclick = "simpleSwitch();">Multiple switch statements</button>
+    <button onclick = "forInSample();">for/in sample</button>
     <script>
-        function simpleSwitch(){
-            let choice;
-            switch(choice= 2){
-            case 1:{
-                let message= "Hi"
-                console.log("Choice Grey");
-                break;
+    'use strict';
+        function forInSample(){
+            let product = {
+                "productID": 7009,
+                "name" : 'Lipstick',
+                "mrp": 1000,
+                "standardCost": 600,
+                calculateProfit: function (){
+                    return this.mrp - this.standardCost;
                 }
-            case 2:
-            {
-                let message = "Bye";
-                console.log(message);
-                break;
-                }
-            case 3:
-                console.log("Choice 3");
-                break;
-            default:
-                console.log("Unknown color");
-                break;
-                }
+            };
+
+          for (let key in product) {
+            console.log("" +key+ "=" +product[key]);
+          }
         }
     </script>
 
