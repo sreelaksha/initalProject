@@ -45,30 +45,20 @@
 </head>
 
 <body>
-    <button onclick = "forOfSample();">for/of sample</button>
+    <button onclick = "loopStringSample();">Loop String sample</button>
     <script>
     'use strict';
 
-            let products = [
-            {
-                "productID": 7009,
-                "name" : 'Lipstick',
-                "mrp": 1000,
-                "standardCost": 600,
-            },
-                {
-                    "productID": 7009,
-                    "name" : 'Brush',
-                    "mrp": 1000,
-                    "standardCost": 600,
-                },
-            ];
+    function loopStringSample(){
+         let string = "Laksha is a FE developer"  ;
+         let letters = "";
+         console.log(letters);
 
-        function forOfSample(){
-          for (let value of products) {
-            console.log(JSON.stringify(value)); // bot the above objects
-          }
-        } // 'of' keyword keeps track of which item in the array is currently being processed
+        for (let value of string) {
+            letters += value;
+         }
+            console.log(letters); //Laksha is a FE developer
+    }
     </script>
 
 </body>
