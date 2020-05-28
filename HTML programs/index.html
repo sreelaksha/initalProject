@@ -45,9 +45,9 @@
 </head>
 
 <body>
-<button onclick = "copyObjArray()"> Copy Object Array() </button>
+<button onclick = "concatenateArray()"> concatenate Array </button>
     <script>
-        function copyObjArray(){
+        function concatenateArray(){
            let products = [
 			 {
 				 "productID": 709,
@@ -62,12 +62,32 @@
 				 "standardCost": 1000,
 			 }
 			 ];
+			 let new_products = [
+			 {
+				 "productID": 711,
+				 "name" : 'Foundation',
+				 "mrp": 10000,
+				 "standardCost": 9000,
+			 },
+			 {
+			    "productID": 712,
+				 "name" : 'Concealer',
+				 "mrp": 1400,
+				 "standardCost": 9000,
+			 },
+			 {
+			    "productID": 712,
+				 "name" : 'Concealer',
+				 "mrp": 1400,
+				 "standardCost": 9000,
+			 }
+			 ];
 
-    let diffObj = [...products];
-    diffObj[0].name = "Lipgloss ";
+    let all_products = products.concat(new_products);
+    console.log(all_products.length);
 
-    console.log(products[0].name);
-    console.log(diffObj[0].name);
+     let allSpread_products = [...products, ...new_products];
+    console.log(allSpread_products.length);
     }
     </script>
 </body>
