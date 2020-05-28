@@ -45,15 +45,24 @@
 </head>
 
 <body>
-    <button onclick = "this.style.background = 'Blue'">In event handler </button>
-    <button onclick = "eventHandler(this)"> Pass to function from event handler </button>
+<button onclick = "objectLiteral()"> Object Literal </button>
     <script>
-        function eventHandler(val){
-                console.log(val.toString());
+
+        function objectLiteral(){
+            let product =  {
+                "pid" : 101,
+                "name" : "Bicycle",
+                "color" : "Black",
+                "mrp" : 2000,
+                "standardPrice" : 1500,
+                grossProfit : function(){
+                 return (this.mrp - this.standardPrice)
+                 }
+            }
+
+            console.log(product.grossProfit());
         }
-		 </script>
-
-
+    </script>
 </body>
 </html>
 
