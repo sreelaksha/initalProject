@@ -45,49 +45,15 @@
 </head>
 
 <body>
-<button onclick = "concatenateArray()"> concatenate Array </button>
+<button onclick = "spreadInConstructor()"> Spread In Constructor </button>
     <script>
-        function concatenateArray(){
-           let products = [
-			 {
-				 "productID": 709,
-				 "name" : 'Lipstick',
-				 "mrp": 1000,
-				 "standardCost": 600,
-			 },
-			 {
-			    "productID": 710,
-				 "name" : 'Brush',
-				 "mrp": 1500,
-				 "standardCost": 1000,
-			 }
-			 ];
-			 let new_products = [
-			 {
-				 "productID": 711,
-				 "name" : 'Foundation',
-				 "mrp": 10000,
-				 "standardCost": 9000,
-			 },
-			 {
-			    "productID": 712,
-				 "name" : 'Concealer',
-				 "mrp": 1400,
-				 "standardCost": 9000,
-			 },
-			 {
-			    "productID": 712,
-				 "name" : 'Concealer',
-				 "mrp": 1400,
-				 "standardCost": 9000,
-			 }
-			 ];
+        function spreadInConstructor(){
+        let dt = new Date(2020, 5, 28);
+        console.log(dt);
 
-    let all_products = products.concat(new_products);
-    console.log(all_products.length);
-
-     let allSpread_products = [...products, ...new_products];
-    console.log(allSpread_products.length);
+        let dateFields = [2020, 5, 29];
+        dt = new Date(...dateFields);
+        console.log(dt);
     }
     </script>
 </body>
