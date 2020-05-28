@@ -45,24 +45,22 @@
 </head>
 
 <body>
-    <button onclick = "typeofSample()">typeof Sample </button>
+    <button onclick = "constructorSample()">Constructor Sample </button>
     <script>
-        function typeofSample(){
-            let product = [1,2,3];
-            let date = new Date();
-            let str = new String();
-            let isActive = false;
-            let result;
-            let val = null;
+        function constructorSample(){
+            let products = [
+		 {
+			 "productID": 7009,
+			 "name" : 'Lipstick',
+			 "mrp": 1000,
+			 "standardCost": 600,
+		 }
+		 ];
 
-
-            console.log(typeof product);
-            console.log(typeof date);
-            console.log(typeof str);
-            console.log(typeof isActive);
-            console.log(typeof result);
-            console.log(typeof val);
-
+		 console.log("products is Array" +isArray(products));
+        function isArray(value){
+            return value.constructor.toString().indexOf("Array") > -1;
+        }
 
         }
 		 </script>
