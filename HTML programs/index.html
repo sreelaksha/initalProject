@@ -45,31 +45,23 @@
 </head>
 
 <body>
-<button onclick = "callAndApply()"> Call and Apply </button>
+<button onclick = "constructorFunc()"> Constructor Function </button>
     <script>
 
-        function callAndApply(){
-            let product =  {
-                "pid" : 101,
-                "name" : "Bicycle",
-                "color" : "Black",
-                "mrp" : 2000,
-                "standardPrice" : 1500,
-                grossProfit : function(){
-                 return (this.mrp - this.standardPrice)
+        function constructorFunc(){
+            function Product(pid, name, mrp, standardCost){
+                this.id = pid;
+                this.name = name;
+                this.sellingPrice = mrp;
+                this.standardPrice = standardCost;
+               this.grossProfit  = function(){
+                 return (this.sellingPrice - this.standardPrice)
                  }
             }
-            let product2 = {
-                "standardPrice" : 1000,
-                "mrp" : 1400,
-            }
-            console.log(product.grossProfit.call(product));
-            console.log(product.grossProfit.call(product2));
-            console.log("");
-            console.log(product.grossProfit.apply(product));
-            console.log(product.grossProfit.apply(product2));
-
-
+            let prod1 = new Product(101, 'Bicycle', 20000, 15000);
+            let prod2 = new Product(102, 'Car' , 30000, 27000);
+            console.log(prod1.grossProfit());
+            console.log(prod2.grossProfit());
         }
     </script>
 </body>
