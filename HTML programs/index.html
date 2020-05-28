@@ -45,17 +45,30 @@
 </head>
 
 <body>
-<button onclick = "copyArray()"> Copy Array() </button>
+<button onclick = "copyObjArray()"> Copy Object Array() </button>
     <script>
-        function copyArray(){
-            let arr1 = [1,2,3];
-            let arr2 = [...arr1];
+        function copyObjArray(){
+           let products = [
+			 {
+				 "productID": 709,
+				 "name" : 'Lipstick',
+				 "mrp": 1000,
+				 "standardCost": 600,
+			 },
+			 {
+			    "productID": 710,
+				 "name" : 'Brush',
+				 "mrp": 1500,
+				 "standardCost": 1000,
+			 }
+			 ];
 
-            arr2.push(4);
-            arr2[0]= 99;
-            console.log(arr1);
-             console.log(arr2);
-        }
+    let diffObj = [...products];
+    diffObj[0].name = "Lipgloss ";
+
+    console.log(products[0].name);
+    console.log(diffObj[0].name);
+    }
     </script>
 </body>
 </html>
