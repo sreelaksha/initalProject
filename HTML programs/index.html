@@ -47,22 +47,9 @@
 <body>
 <button onclick = "constructorFunc()"> Constructor Function </button>
     <script>
-
-        function constructorFunc(){
-            function Product(pid, name, mrp, standardCost){
-                this.id = pid;
-                this.name = name;
-                this.sellingPrice = mrp;
-                this.standardPrice = standardCost;
-               this.grossProfit  = function(){
-                 return (this.sellingPrice - this.standardPrice)
-                 }
-            }
-            let prod1 = new Product(101, 'Bicycle', 20000, 15000);
-            let prod2 = new Product(102, 'Car' , 30000, 27000);
-            console.log(prod1.grossProfit());
-            console.log(prod2.grossProfit());
-        }
+        let string = "Laksha | FE Developer";
+        let arr = [...string];
+        console.log(arr);
     </script>
 </body>
 </html>
