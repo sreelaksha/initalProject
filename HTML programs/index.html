@@ -45,19 +45,28 @@
 </head>
 
 <body>
-    <button onclick = "constructorSample()">Constructor Sample </button>
+    <button onclick = "instanceOfSample()">instanceof Sample </button>
     <script>
-        function constructorSample(){
-            let products = [
-		 {
-			 "productID": 7009,
-			 "name" : 'Lipstick',
-			 "mrp": 1000,
-			 "standardCost": 600,
-		 }
-		 ];
+        function instanceOfSample(){
+            let prod = new Product(101, "Black" , "ST100");
+            let dt = new Date();
+            let name= new String("Product name")
+            let value1 = "Laksha";
 
-		 console.log("products: " +products.constructor.toString());
+            console.log("products instanceof Product: " + (prod instanceof Product)); //true
+            console.log("products instanceof obj: " + (prod instanceof Object)); //true
+            console.log("date instanceof Date: " + (dt instanceof Date)); //true
+            console.log("date instanceof obj: " + (dt instanceof Object)); //true
+            console.log("name instanceof obj: " + (name instanceof Object)); //true
+            console.log("name instanceof String: " + (name instanceof String)); //true
+            console.log("value instanceof String: " + (value1 instanceof String)); //false
+             console.log("value instanceof obj: " + (value1 instanceof Object)); //false
+        }
+
+   function Product(id, color, model){
+    this.pId = id;
+    this.color= color;
+    this.model = model;
    }
 		 </script>
 
