@@ -45,11 +45,17 @@
 </head>
 
 <body>
-<button onclick = "constructorFunc()"> Constructor Function </button>
+<button onclick = "copyArray()"> Copy Array() </button>
     <script>
-        let string = "Laksha | FE Developer";
-        let arr = [...string];
-        console.log(arr);
+        function copyArray(){
+            let arr1 = [1,2,3];
+            let arr2 = [...arr1];
+
+            arr2.push(4);
+            arr2[0]= 99;
+            console.log(arr1);
+             console.log(arr2);
+        }
     </script>
 </body>
 </html>
