@@ -45,29 +45,12 @@
 </head>
 
 <body>
-    <button onclick = "instanceOfSample()">instanceof Sample </button>
+    <button onclick = "this.style.background = 'Blue'">In event handler </button>
+    <button onclick = "eventHandler(this)"> Pass to function from event handler </button>
     <script>
-        function instanceOfSample(){
-            let prod = new Product(101, "Black" , "ST100");
-            let dt = new Date();
-            let name= new String("Product name")
-            let value1 = "Laksha";
-
-            console.log("products instanceof Product: " + (prod instanceof Product)); //true
-            console.log("products instanceof obj: " + (prod instanceof Object)); //true
-            console.log("date instanceof Date: " + (dt instanceof Date)); //true
-            console.log("date instanceof obj: " + (dt instanceof Object)); //true
-            console.log("name instanceof obj: " + (name instanceof Object)); //true
-            console.log("name instanceof String: " + (name instanceof String)); //true
-            console.log("value instanceof String: " + (value1 instanceof String)); //false
-             console.log("value instanceof obj: " + (value1 instanceof Object)); //false
+        function eventHandler(val){
+                console.log(val.toString());
         }
-
-   function Product(id, color, model){
-    this.pId = id;
-    this.color= color;
-    this.model = model;
-   }
 		 </script>
 
 
