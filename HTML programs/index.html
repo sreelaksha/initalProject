@@ -45,16 +45,20 @@
 </head>
 
 <body>
-<button onclick = "spreadInConstructor()"> Spread In Constructor </button>
+<button onclick = "spreadInFunction()"> Spread In Function </button>
     <script>
-        function spreadInConstructor(){
-        let dt = new Date(2020, 5, 28);
-        console.log(dt);
+        function spreadInFunction(){
+        multipleArgs(100,200,300)
 
-        let dateFields = [2020, 5, 29];
-        dt = new Date(...dateFields);
-        console.log(dt);
-    }
+            let arg = [10,20,30,40]
+            multipleArgs(...arg);
+
+            function multipleArgs(arg1, arg2, arg3){
+                console.log(arg1);
+                console.log(arg2);
+                console.log(arg3);
+            }
+        }
     </script>
 </body>
 </html>
