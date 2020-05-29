@@ -45,20 +45,23 @@
 </head>
 
 <body>
-<button onclick = "spreadInFunction()"> Spread In Function </button>
+<button onclick = "shallowCopy()">Shallow Copy on object </button>
     <script>
-        function spreadInFunction(){
-        multipleArgs(100,200,300)
-
-            let arg = [10,20,30,40]
-            multipleArgs(...arg);
-
-            function multipleArgs(arg1, arg2, arg3){
-                console.log(arg1);
-                console.log(arg2);
-                console.log(arg3);
-            }
-        }
+        		function shallowCopy(){
+		           let product =
+					 {
+						 "productID": 709,
+						 "name" : 'Lipstick',
+						 "mrp": 1000,
+						 "standardCost": 600,
+                     } ;
+                     let product2 = {...product};
+                     product2.name = "Gloss";
+                     console.log(product);
+                     console.log(product2);
+                     console.log(product.name);
+                     console.log(product2.name);
+                 }
     </script>
 </body>
 </html>
