@@ -65,21 +65,29 @@
     </script>-->
 
     <script>
-        const myName = (name) => {
-            console.log(name);
+        class Human{
+            constructor(){
+                this.gender = 'Female';
+            }
+
+            printGender(){
+                console.log(this.gender);
+            }
         }
-        myName('Laksha');
 
-
-        const multiply = number => {
-           return number * 5;
+        class Person extends Human{
+            constructor(){
+                super();
+                this.name = 'Laksha';
+            }
+            printName(){
+                console.log(this.name);
+            }
         }
-         console.log(multiply(2));
 
-
-         const multiplySec = number =>  number * 20;
-        console.log(multiplySec(2));
-
+        let person = new Person();
+        person.printName();
+        person.printGender();
     </script>
 
 
