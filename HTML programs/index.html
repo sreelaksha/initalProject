@@ -65,25 +65,25 @@
     </script>-->
 
     <script>
-        //Array destructuring
-        const numbers = [1,2,3,4];
-        [num1, ,num3] = numbers;
-        console.log(num1,num3);
+        //Primitive types - Numbers, String, Booleans
+        const number = 100;
+        const num2 = number;
+        console.log(num2);
 
-
-        //object destructuring
+        //Reference types - Objects and Arrays
         const obj = {
-            id :  420,
-            name : 'Laksha'
+            name : 'laksha',
+            age : 27
         }
-        const {id, name} = obj;
-        console.log(id); //420
-        console.log(name);
 
-        let a, b;
+        const obj2 = {
+            ...obj
+        };
+        obj.name = 'Duggu';
+        console.log(obj2); //name:'laksha' ,age 27
 
-        ({a, b} = {a: 1, b: 2});
-        console.log(a,b)
+
+
     </script>
 
 
