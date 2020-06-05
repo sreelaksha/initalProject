@@ -65,24 +65,12 @@
     </script>-->
 
     <script>
-        //Primitive types - Numbers, String, Booleans
-        const number = 100;
-        const num2 = number;
-        console.log(num2);
-
-        //Reference types - Objects and Arrays
-        const obj = {
-            name : 'laksha',
-            age : 27
-        }
-
-        const obj2 = {
-            ...obj
-        };
-        obj.name = 'Duggu';
-        console.log(obj2); //name:'laksha' ,age 27
-
-
+        const array = [2,4,6];
+        const array2 = array.map((num) => {
+            return num * 2;
+        });
+        console.log(array); //2 4 6
+        console.log(array2); //4 8 12
 
     </script>
 
