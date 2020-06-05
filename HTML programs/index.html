@@ -66,25 +66,19 @@
 
     <script>
         class Human{
-            constructor(){
-                this.gender = 'Female';
-            }
+            gender = 'Female';
 
-            printGender(){
+             printGender = () => {
                 console.log(this.gender);
             }
         }
-
         class Person extends Human{
-            constructor(){
-                super();
-                this.name = 'Laksha';
-            }
-            printName(){
+            name = 'Laksha';
+
+            printName = () => {
                 console.log(this.name);
             }
         }
-
         let person = new Person();
         person.printName();
         person.printGender();
