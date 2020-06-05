@@ -65,23 +65,28 @@
     </script>-->
 
     <script>
-        class Human{
-            gender = 'Female';
 
-             printGender = () => {
-                console.log(this.gender);
-            }
-        }
-        class Person extends Human{
-            name = 'Laksha';
+        //Spread Operator
+        let array = [10,20,30]
+        let newArr = [...array, 40]
+        console.log(newArr);
 
-            printName = () => {
-                console.log(this.name);
-            }
+        let obj1 = {
+            name:'Laksha',
+            age: 27
         }
-        let person = new Person();
-        person.printName();
-        person.printGender();
+        let obj2 = {
+            ...obj1,
+            occupation: 'Software Engineer'
+        }
+         console.log(obj2);
+
+        //Rest Operator
+         const myFunc = (...args) => {
+            return args.filter(el => el === 1);
+         }
+         console.log(myFunc(1,200)); //[1]
+
     </script>
 
 
