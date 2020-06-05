@@ -65,28 +65,25 @@
     </script>-->
 
     <script>
+        //Array destructuring
+        const numbers = [1,2,3,4];
+        [num1, ,num3] = numbers;
+        console.log(num1,num3);
 
-        //Spread Operator
-        let array = [10,20,30]
-        let newArr = [...array, 40]
-        console.log(newArr);
 
-        let obj1 = {
-            name:'Laksha',
-            age: 27
+        //object destructuring
+        const obj = {
+            id :  420,
+            name : 'Laksha'
         }
-        let obj2 = {
-            ...obj1,
-            occupation: 'Software Engineer'
-        }
-         console.log(obj2);
+        const {id, name} = obj;
+        console.log(id); //420
+        console.log(name);
 
-        //Rest Operator
-         const myFunc = (...args) => {
-            return args.filter(el => el === 1);
-         }
-         console.log(myFunc(1,200)); //[1]
+        let a, b;
 
+        ({a, b} = {a: 1, b: 2});
+        console.log(a,b)
     </script>
 
 
